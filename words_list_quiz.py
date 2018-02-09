@@ -45,13 +45,14 @@ for w in words:
 print(count)
 
 count = 0
-quuz = False
+qnou = False
 for w in words:
     for i in range(len(w)-1):
         if w[i] == 'q' and w[i+1] != 'u':
-            quuz = True
-    if quuz == True:
+            qnou = True
+    if w[-1] == 'q':
+        qnou = True
+    if qnou == True:
         count += 1
-    elif w[-1] == 'q':
-        count += 1
+    
 print(count)
